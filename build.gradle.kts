@@ -12,7 +12,15 @@ var jaxbVersion = "4.0.5"
 var jakartaVersion = "4.0.2"
 var awaitibilityVersion = "4.3.0"
 
+group = "roshka.diegoduarte"
+version = "0.0.1-SNAPSHOT"
+
 javaPlatform.allowDependencies()
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
 
 dependencies{
     api(platform("org.springframework.boot:spring-boot-dependencies:3.4.4"))
@@ -27,6 +35,12 @@ dependencies.constraints {
 
     // MapStruct
     api("org.mapstruct:mapstruct:${mapstructVersion}")
+    api("org.mapstruct:mapstruct-processor"){
+        version {
+            strictly(mapstructVersion)
+        }
+    }
+    api("org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}")
 
     // Awaitility (test)
     api("org.awaitility:awaitility:${awaitibilityVersion}")
@@ -56,4 +70,12 @@ tasks.withType<Test> {
 
 tasks.withType<JavaCompile> {
     options.compilerArgs.add("-Amapstruct.defaultComponentModel=spring")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenBom") {
+            from(components["javaPlatform"])
+        }
+    }
 }
