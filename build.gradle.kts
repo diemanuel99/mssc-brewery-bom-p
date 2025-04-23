@@ -11,6 +11,7 @@ var lombokMapstructBindingVersion = "0.2.0"
 var jaxbVersion = "4.0.5"
 var jakartaVersion = "4.0.2"
 var awaitibilityVersion = "4.3.0"
+var mockitoVersion = "5.16.0"
 
 group = "roshka.diegoduarte"
 version = "0.0.1-SNAPSHOT"
@@ -24,22 +25,18 @@ repositories {
 
 dependencies{
     api(platform("org.springframework.boot:spring-boot-dependencies:3.4.4"))
+    api(platform("com.github.sfg-beer-works:sfg-beer-works-bom:1.0.27"))
 }
 
 
 dependencies.constraints {
-
     api("jakarta.xml.bind:jakarta.xml.bind-api:${jakartaVersion}")
     api("com.sun.xml.bind:jaxb-core:${jaxbVersion}")
     api("com.sun.xml.bind:jaxb-impl:${jaxbVersion}")
 
     // MapStruct
     api("org.mapstruct:mapstruct:${mapstructVersion}")
-    api("org.mapstruct:mapstruct-processor"){
-        version {
-            strictly(mapstructVersion)
-        }
-    }
+    api("org.mapstruct:mapstruct-processor:${mapstructVersion}")
     api("org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}")
 
     // Awaitility (test)
@@ -49,7 +46,8 @@ dependencies.constraints {
     api("org.projectlombok:lombok:${lombokVersion}")
     api("org.junit.jupiter:junit-jupiter-api")
     api("org.junit.jupiter:junit-jupiter-engine")
-    api("org.mockito:mockito-junit-jupiter")
+    api("org.mockito:mockito-junit-jupiter:${mockitoVersion}")
+    api("org.mockito:mockito-core:5.16.0:${mockitoVersion}")
 
     // Spring Starters (sin versiones explícitas gracias al BOM de Spring Boot)
     api("org.springframework.boot:spring-boot-starter")
