@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mssc-beer-inventory-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mssc-beer-inventory-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mssc-beer-order-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mssc-beer-order-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mssc-beer-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mssc-beer-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/mssc-brewery-ws.iml" filepath="$PROJECT_DIR$/mssc-brewery-ws.iml" />
     </modules>
   </component>
