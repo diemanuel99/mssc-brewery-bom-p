@@ -25,7 +25,6 @@ repositories {
 
 dependencies{
     api(platform("org.springframework.boot:spring-boot-dependencies:3.4.4"))
-    api(platform("com.github.sfg-beer-works:sfg-beer-works-bom:1.0.27"))
 }
 
 
@@ -47,7 +46,7 @@ dependencies.constraints {
     api("org.junit.jupiter:junit-jupiter-api")
     api("org.junit.jupiter:junit-jupiter-engine")
     api("org.mockito:mockito-junit-jupiter:${mockitoVersion}")
-    api("org.mockito:mockito-core:5.16.0:${mockitoVersion}")
+    api("org.mockito:mockito-core:${mockitoVersion}")
 
     // Spring Starters (sin versiones explícitas gracias al BOM de Spring Boot)
     api("org.springframework.boot:spring-boot-starter")
@@ -59,6 +58,7 @@ dependencies.constraints {
 
     // Drivers
     api("com.h2database:h2")
+    api("com.mysql:mysql-connector-j:9.2.0")
     api("mysql:mysql-connector-java")
 }
 

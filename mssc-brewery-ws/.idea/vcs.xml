@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../mssc-brewery-ws/mssc-beer-inventory-service-p" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../mssc-brewery-ws/mssc-beer-order-service-p" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../mssc-brewery-ws/mssc-beer-service-p" vcs="Git" />
+  </component>
+</project>
