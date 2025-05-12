@@ -55,6 +55,7 @@ dependencies.constraints {
     api("org.springframework.boot:spring-boot-starter-web")
     api("org.springframework.boot:spring-boot-devtools")
     api("org.springframework.boot:spring-boot-starter-test")
+    api("org.springframework.boot:spring-boot-starter-artemis")
 
     // Drivers
     api("com.h2database:h2")
